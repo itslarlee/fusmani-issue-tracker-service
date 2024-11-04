@@ -1,4 +1,3 @@
-// controllers/issueController.ts
 import { Request, Response } from 'express';
 import { v4 as uuidv4 } from 'uuid';
 import { IssueParams, CreateIssueBody, UpdateIssueBody } from '../types/query-params';
@@ -36,19 +35,23 @@ export const getIssue = (req: Request<IssueParams>, res: Response) => {
   }
 };
 
-export const updateIssueStatus = (req: Request<IssueParams, {}, UpdateIssueBody>, res: Response) => {
+export const updateIssue = (req: Request<IssueParams, {}, UpdateIssueBody>, res: Response) => {
   const { id } = req.params;
   const issue = issues.find((issue) => issue.id === id);
+
   if (!issue) {
     sendResponse<Issue>(res, 404, 'Issue not found', null);
   } else {
-    issue.status = req.body.status;
+    issue.title = req.body.title ?? issue.title;
+    issue.description = req.body.description ?? issue.description;
+    issue.status = req.body.status ?? issue.status;
+    issue.priority = req.body.priority ?? issue.priority;
     issue.updatedDate = new Date();
-    sendResponse(res, 200, 'Issue status updated successfully', issue);
+    sendResponse(res, 200, 'Issue updated successfully', issue);
   }
 };
 
-// Delete an issue
+
 export const deleteIssue = (req: Request<IssueParams>, res: Response) => {
   const { id } = req.params;
   issues = issues.filter((issue) => issue.id !== id);

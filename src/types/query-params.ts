@@ -14,5 +14,8 @@ export interface CreateIssueBody {
 }
 
 export interface UpdateIssueBody {
+  title: string;
+  description: string;
   status: Status;
+  priority: Priority;
 }
