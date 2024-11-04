@@ -1,12 +1,12 @@
-# Issue Tracker API
+# Issue Tracker Service
 
 An issue tracking API built with Node.js, Express, TypeScript, and UUID for unique identifiers. This API allows users to create, view, update, and delete issues.
 
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
+- [Technologies Used](#technologies-used)
 - [Available Endpoints](#available-endpoints)
 - [Contributing](#contributing)
 
@@ -15,14 +15,6 @@ An issue tracking API built with Node.js, Express, TypeScript, and UUID for uniq
 ## Project Overview
 
 This project provides a RESTful API for managing issues, with CRUD endpoints to create, retrieve, update, and delete issues. It includes a simple in-memory data storage for demonstration purposes.
-
-## Technologies Used
-
-- **Node.js** - JavaScript runtime for building scalable network applications
-- **Express** - Web application framework for handling routes and middleware
-- **TypeScript** - Typed superset of JavaScript for better code maintainability and error checking
-- **UUID** - Library to generate unique identifiers for issues
-- **Nodemon** - Utility that automatically restarts the server during development
 
 ## Setup Instructions
 
@@ -36,8 +28,8 @@ This project provides a RESTful API for managing issues, with CRUD endpoints to 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/itslarlee/fusmani-issue-tracker-service.git
+   cd fusmani-issue-tracker-service
 
 2. **Install dependencies**:
 
@@ -97,6 +89,14 @@ This project provides a RESTful API for managing issues, with CRUD endpoints to 
     "message": "Issue created successfully",
     "status": 201
   }
+
+## Technologies Used
+
+- **Node.js** - JavaScript runtime for building scalable network applications
+- **Express** - Web application framework for handling routes and middleware
+- **TypeScript** - Typed superset of JavaScript for better code maintainability and error checking
+- **UUID** - Library to generate unique identifiers for issues
+- **Nodemon** - Utility that automatically restarts the server during development
 
 ## Contributing
 
