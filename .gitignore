@@ -16,3 +16,6 @@ build/
 logs
 *.log
 logs/*.log
+
+# Nodemon configuration
+nodemon.json
